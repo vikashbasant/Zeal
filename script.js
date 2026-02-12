@@ -59,6 +59,24 @@
     }
   });
 
+  // ——— Clients strip: pause auto-scroll when user manually scrolls ———
+  (function initClientsStripScroll() {
+    var strip = document.getElementById('clients-strip');
+    var track = strip && strip.querySelector('.clients__track');
+    if (!strip || !track) return;
+    var pauseTimeout;
+    function pauseAnimation() {
+      track.style.animationPlayState = 'paused';
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(function () {
+        track.style.animationPlayState = '';
+      }, 1500);
+    }
+    strip.addEventListener('scroll', pauseAnimation, { passive: true });
+    strip.addEventListener('touchstart', pauseAnimation, { passive: true });
+    strip.addEventListener('wheel', pauseAnimation, { passive: true });
+  })();
+
   // ——— Smooth scroll for anchor links ———
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {

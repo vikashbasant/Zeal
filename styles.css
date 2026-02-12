@@ -1052,12 +1052,20 @@ a:hover {
   margin: 0 auto var(--space-48);
 }
 
-/* Banner strip – full width, scrolling marquee */
+/* Banner strip – full width, scrolling marquee, manual scroll via touch only (no scrollbar) */
 .clients__strip {
   width: 100%;
   padding: 50px 0 60px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   margin-top: 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.clients__strip::-webkit-scrollbar {
+  display: none;
 }
 
 .clients__track {
