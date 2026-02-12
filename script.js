@@ -99,6 +99,37 @@
     });
   }
 
+  // ——— Hero: 5 videos in plus layout; center always 22098, others random ———
+  (function initHeroVideoPlus() {
+    var container = document.getElementById('hero-video-plus');
+    if (!container) return;
+    var slots = container.querySelectorAll('.hero__video-slot video');
+    if (slots.length !== 5) return;
+    var centerVideo = '22098-325253535_medium.mp4';
+    var otherSources = [
+      '129409-744385400_medium.mp4',
+      '28024-367196732_medium.mp4',
+      '43498-436041844_medium.mp4',
+      '85824-590437558_medium.mp4'
+    ];
+    // Shuffle the 4 for top, left, right, bottom (Fisher–Yates)
+    for (var i = otherSources.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = otherSources[i];
+      otherSources[i] = otherSources[j];
+      otherSources[j] = t;
+    }
+    // Slots order: top(0), left(1), center(2), right(3), bottom(4)
+    slots[0].src = otherSources[0];
+    slots[1].src = otherSources[1];
+    slots[2].src = centerVideo;
+    slots[3].src = otherSources[2];
+    slots[4].src = otherSources[3];
+    slots.forEach(function (video, index) {
+      video.setAttribute('aria-label', 'Telecom video ' + (index + 1));
+    });
+  })();
+
   // ——— About section: image shuffle slideshow (team-wrok folder) ———
   function initAboutImageShuffle() {
     const container = document.getElementById('about-image-shuffle');

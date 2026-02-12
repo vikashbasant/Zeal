@@ -40,15 +40,109 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero__overlay"></div>
-      <div class="hero__content container">
-        <h1 class="hero__title">Building the Future of Telecom Infrastructure</h1>
-        <p class="hero__subtext">Trusted telecom contracting partner delivering reliable network solutions across Punjab and India.</p>
-        <div class="hero__cta">
-          <a href="#contact" class="btn btn--primary">Contact Us</a>
-          <a href="#services" class="btn btn--secondary">Our Services</a>
+      <div class="hero__row container">
+        <div class="hero__content">
+          <h1 class="hero__title">Building the Future of Telecom Infrastructure</h1>
+          <p class="hero__subtext">Trusted telecom contracting partner delivering reliable network solutions across Punjab and India.</p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--primary">Contact Us</a>
+            <a href="#services" class="btn btn--secondary">Our Services</a>
+          </div>
+        </div>
+        <div class="hero__video hero__video-network">
+          <svg class="hero__video-wires" viewBox="0 0 3 3" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="1.5" y1="1.5" x2="1.5" y2="0.5" class="hero__wire hero__wire--top"/>
+            <line x1="1.5" y1="1.5" x2="0.5" y2="1.5" class="hero__wire hero__wire--left"/>
+            <line x1="1.5" y1="1.5" x2="2.5" y2="1.5" class="hero__wire hero__wire--right"/>
+            <line x1="1.5" y1="1.5" x2="1.5" y2="2.5" class="hero__wire hero__wire--bottom"/>
+          </svg>
+          <div class="hero__video-plus" id="hero-video-plus">
+            <div class="hero__video-slot hero__video-slot--top"><video autoplay muted loop playsinline></video></div>
+            <div class="hero__video-slot hero__video-slot--left"><video autoplay muted loop playsinline></video></div>
+            <div class="hero__video-slot hero__video-slot--center"><video autoplay muted loop playsinline></video></div>
+            <div class="hero__video-slot hero__video-slot--right"><video autoplay muted loop playsinline></video></div>
+            <div class="hero__video-slot hero__video-slot--bottom"><video autoplay muted loop playsinline></video></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__stats" id="stats">
+        <div class="container">
+          <div class="hero__stats__grid">
+            <div class="stats__item">
+              <div class="stats__value"><span class="stats__number" data-target="100">0</span><span class="stats__suffix">+</span></div>
+              <span class="stats__label">Projects Completed</span>
+            </div>
+            <div class="stats__item">
+              <div class="stats__value"><span class="stats__number" data-target="50">0</span><span class="stats__suffix">+</span></div>
+              <span class="stats__label">Sites Deployed</span>
+            </div>
+            <div class="stats__item">
+              <div class="stats__value"><span class="stats__number" data-target="5">0</span><span class="stats__suffix">+</span></div>
+              <span class="stats__label">Years Experience</span>
+            </div>
+            <div class="stats__item">
+              <div class="stats__value"><span class="stats__number" data-target="20">0</span><span class="stats__suffix">+</span></div>
+              <span class="stats__label">Technical Staff</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero__divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Our Services</h2>
+          <div class="section__line"></div>
+          <p class="section__subtitle">End-to-end telecom infrastructure solutions for operators and enterprises.</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5.64 5.64l2.83 2.83m7.06 7.06l2.83 2.83M5.64 18.36l2.83-2.83m7.06-7.06l2.83-2.83M18.36 5.64l-2.83 2.83M7.76 16.24l-2.83 2.83"/></svg>
+            </div>
+            <h3 class="service-card__title">Telecom Tower Installation</h3>
+            <p class="service-card__desc">Full turnkey installation of telecom towers including foundation, mast erection, and antenna mounting for robust network coverage.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M4 8h16M4 16h8"/></svg>
+            </div>
+            <h3 class="service-card__title">Fiber Optic Cable Laying</h3>
+            <p class="service-card__desc">Professional trenching, duct laying, and fiber optic cable installation for high-speed backhaul and last-mile connectivity.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4h8v16H8zM4 8h4v8H4zM16 8h4v8h-4z"/></svg>
+            </div>
+            <h3 class="service-card__title">Network Rollout & Deployment</h3>
+            <p class="service-card__desc">End-to-end network rollout management including site identification, installation, integration, and commissioning.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="service-card__title">4G / 5G Infrastructure Setup</h3>
+            <p class="service-card__desc">Deployment of 4G and 5G radio equipment, small cells, and supporting infrastructure for next-generation networks.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="service-card__title">Telecom Equipment Installation</h3>
+            <p class="service-card__desc">Installation and commissioning of BTS, RRU, BBU, power systems, and shelter equipment at telecom sites.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="service-card__title">Civil & Electrical Works</h3>
+            <p class="service-card__desc">Civil construction, tower foundation, compound works, and electrical installation including DG and power distribution.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Clients / Partners -->
@@ -154,61 +248,6 @@
               <li><span class="check" aria-hidden="true"></span><span>Based in Mohali, Punjab</span></li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Services -->
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title">Our Services</h2>
-          <div class="section__line"></div>
-          <p class="section__subtitle">End-to-end telecom infrastructure solutions for operators and enterprises.</p>
-        </div>
-        <div class="services__grid">
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5.64 5.64l2.83 2.83m7.06 7.06l2.83 2.83M5.64 18.36l2.83-2.83m7.06-7.06l2.83-2.83M18.36 5.64l-2.83 2.83M7.76 16.24l-2.83 2.83"/></svg>
-            </div>
-            <h3 class="service-card__title">Telecom Tower Installation</h3>
-            <p class="service-card__desc">Full turnkey installation of telecom towers including foundation, mast erection, and antenna mounting for robust network coverage.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M4 8h16M4 16h8"/></svg>
-            </div>
-            <h3 class="service-card__title">Fiber Optic Cable Laying</h3>
-            <p class="service-card__desc">Professional trenching, duct laying, and fiber optic cable installation for high-speed backhaul and last-mile connectivity.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4h8v16H8zM4 8h4v8H4zM16 8h4v8h-4z"/></svg>
-            </div>
-            <h3 class="service-card__title">Network Rollout & Deployment</h3>
-            <p class="service-card__desc">End-to-end network rollout management including site identification, installation, integration, and commissioning.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3 class="service-card__title">4G / 5G Infrastructure Setup</h3>
-            <p class="service-card__desc">Deployment of 4G and 5G radio equipment, small cells, and supporting infrastructure for next-generation networks.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="service-card__title">Telecom Equipment Installation</h3>
-            <p class="service-card__desc">Installation and commissioning of BTS, RRU, BBU, power systems, and shelter equipment at telecom sites.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-            </div>
-            <h3 class="service-card__title">Civil & Electrical Works</h3>
-            <p class="service-card__desc">Civil construction, tower foundation, compound works, and electrical installation including DG and power distribution.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -362,30 +401,6 @@
             </div>
             <h3>Timely Delivery Assurance</h3>
             <p>Structured planning and execution so projects complete on schedule without compromising safety.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Statistics / Achievement Counter -->
-    <section class="section stats" id="stats">
-      <div class="container">
-        <div class="stats__grid">
-          <div class="stats__item">
-            <div class="stats__value"><span class="stats__number" data-target="100">0</span><span class="stats__suffix">+</span></div>
-            <span class="stats__label">Projects Completed</span>
-          </div>
-          <div class="stats__item">
-            <div class="stats__value"><span class="stats__number" data-target="50">0</span><span class="stats__suffix">+</span></div>
-            <span class="stats__label">Sites Deployed</span>
-          </div>
-          <div class="stats__item">
-            <div class="stats__value"><span class="stats__number" data-target="5">0</span><span class="stats__suffix">+</span></div>
-            <span class="stats__label">Years Experience</span>
-          </div>
-          <div class="stats__item">
-            <div class="stats__value"><span class="stats__number" data-target="20">0</span><span class="stats__suffix">+</span></div>
-            <span class="stats__label">Technical Staff</span>
           </div>
         </div>
       </div>
