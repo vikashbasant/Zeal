@@ -216,6 +216,13 @@ a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
 /* ========== Buttons ========== */
 .btn {
   display: inline-flex;
@@ -1915,6 +1922,8 @@ a:hover {
     padding-right: var(--space-24);
     min-height: 500px;
     padding-top: calc(var(--header-height) + var(--space-64));
+    justify-content: flex-start;
+    padding-bottom: var(--space-24);
   }
 
   .hero__row {
@@ -1956,7 +1965,20 @@ a:hover {
   }
 
   .hero__stats {
-    margin-top: var(--space-40);
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: var(--space-32);
+    margin-bottom: var(--space-24);
+  }
+
+  .nav-overlay {
+    background: rgba(10, 31, 68, 0.5);
+  }
+
+  body.menu-open .nav-overlay {
+    display: block;
   }
 
   .nav__menu {
@@ -1971,7 +1993,8 @@ a:hover {
     padding: var(--space-24);
     gap: 0;
     box-shadow: -4px 0 24px rgba(11, 60, 93, 0.12);
-    transition: right var(--transition);
+    transition: right 0.15s ease;
+    z-index: 1001;
   }
 
   .nav__menu.active {

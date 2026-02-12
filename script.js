@@ -9,6 +9,7 @@
   const header = document.getElementById('header');
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
   const navLinks = document.querySelectorAll('.nav__link');
   const contactForm = document.getElementById('contact-form');
   const yearEl = document.getElementById('year');
@@ -27,13 +28,19 @@
 
   // ——— Mobile menu toggle ———
   function toggleMenu() {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    var isOpen = navMenu.classList.toggle('active');
+    navToggle.classList.toggle('active', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
   if (navToggle) {
     navToggle.addEventListener('click', toggleMenu);
+  }
+  if (navOverlay) {
+    navOverlay.addEventListener('click', function () {
+      if (navMenu.classList.contains('active')) toggleMenu();
+    });
   }
 
   // Close menu on link click (smooth scroll then close)
@@ -127,6 +134,18 @@
     slots[4].src = otherSources[3];
     slots.forEach(function (video, index) {
       video.setAttribute('aria-label', 'Telecom video ' + (index + 1));
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute('playsinline', '');
+      video.setAttribute('muted', '');
+      video.setAttribute('autoplay', '');
+      video.addEventListener('loadeddata', function () {
+        video.play().catch(function () {});
+      });
+      video.addEventListener('canplay', function () {
+        video.play().catch(function () {});
+      });
+      if (video.readyState >= 2) video.play().catch(function () {});
     });
   })();
 
